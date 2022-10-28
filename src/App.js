@@ -1,14 +1,13 @@
 import React from "react";
-import ClassCounter from "./components/ClassCounter";
+import BlogItem from "./components/BlogItem";
+import "./styles/App.css";
 
 function App() {
     return (
         <div className="App">
-            <ClassCounter/>
-            <ClassCounter/>
-            <ClassCounter/>
-            <ClassCounter/>
-            <ClassCounter/>
+            <BlogItem title="1. First" body="Text Text Text Text Text Text Text"/>
+            <BlogItem title="2. Second" body="Text Text Text Text Text Text Text"/>
+            <BlogItem title="3. Third" body="Text Text Text Text Text Text Text"/>
         </div>
     );
 }
