@@ -1,6 +1,6 @@
 import React from "react";
 import BestInput from "../UI/fields/BestInput";
-import BestBtn from "../UI/buttons/BestBtn";
+import EmptyBtn from "../UI/buttons/EmptyBtn";
 
 class BlogForm extends React.Component {
 
@@ -36,11 +36,12 @@ class BlogForm extends React.Component {
     render() {
         return (
             <form className="post_form" onSubmit={this.handleSubmit}>
-                <BestInput onChange={this.handleChange.bind(this)} value={this.state.title} name="title" type="text"
+                <BestInput onChange={this.handleChange} value={this.state.title} name="title" type="text"
                            placeholder="Название поста" class="post_add"/>
-                <BestInput onChange={this.handleChange.bind(this)} value={this.state.body} name="body" type="text"
+                <BestInput onChange={this.handleChange} value={this.state.body} name="body" type="text"
                            placeholder="Описание поста" class="post_add"/>
-                <BestBtn title="Добавить" class="post_add"/>
+
+                <EmptyBtn title="Добавить" class="post_add"/>
             </form>
         )
     }

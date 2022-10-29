@@ -1,24 +1,24 @@
 import React from "react";
-import classes from "./BestBtn.module.css";
+import classes from "./Btn.module.css";
 
-class BestBtn extends React.Component {
+class HandleBtn extends React.Component {
 
     constructor(props) {
         super(props);
         this.title = this.props.title;
         this.class = this.props.class;
-        this.id = this.props.id;
+        this.item = this.props.item;
         /** Получаем CallBack функцию */
-        this.onClick = this.props.onClick;
+        this.handleClick = this.props.handleClick;
     }
 
     render() {
         return (
             <div className={classes[this.class]}>
-                <button data-id={this.id} onClick={this.onClick}>{this.title}</button>
+                <button onClick={() =>this.handleClick(this.item)}>{this.title}</button>
             </div>
         )
     }
 }
 
-export default BestBtn;
+export default HandleBtn;
