@@ -1,13 +1,12 @@
-import React from "react";
-import BlogItem from "./components/BlogItem";
+import React, {useState} from "react";
 import "./styles/App.css";
+import Blog from "./components/Blog/Blog";
 
 function App() {
+
     return (
         <div className="App">
-            <BlogItem title="1. First" body="Text Text Text Text Text Text Text"/>
-            <BlogItem title="2. Second" body="Text Text Text Text Text Text Text"/>
-            <BlogItem title="3. Third" body="Text Text Text Text Text Text Text"/>
+            <Blog title="Короткие записи"/>
         </div>
     );
 }

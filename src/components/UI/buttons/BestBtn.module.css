@@ -1,0 +1,9 @@
+.post_add button{
+    background-color: blue;
+    color: white;
+}
+
+.post_delete button{
+    background-color: red;
+    color: white;
+}
