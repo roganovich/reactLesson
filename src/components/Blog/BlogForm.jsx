@@ -8,8 +8,8 @@ class BlogForm extends React.Component {
         super(props);
         /** Состояние */
         this.state = {
-            title: '1',
-            body: '2',
+            title: 'Название',
+            body: 'Содержимое',
         };
         /** Получаем CallBack функцию */
         this.createPost = this.props.createPost;
@@ -35,14 +35,16 @@ class BlogForm extends React.Component {
 
     render() {
         return (
-            <form className="post_form" onSubmit={this.handleSubmit}>
-                <BestInput onChange={this.handleChange} value={this.state.title} name="title" type="text"
-                           placeholder="Название поста" class="post_add"/>
-                <BestInput onChange={this.handleChange} value={this.state.body} name="body" type="text"
-                           placeholder="Описание поста" class="post_add"/>
+            <div className={'bd-example'}>
+                <form className="form" onSubmit={this.handleSubmit}>
+                    <BestInput onChange={this.handleChange} value={this.state.title} name="title" type="text"
+                               title="Название поста" class="mb-3"/>
+                    <BestInput onChange={this.handleChange} value={this.state.body} name="body" type="text"
+                               title="Описание поста" class="mb-3"/>
 
-                <EmptyBtn title="Добавить" class="post_add"/>
-            </form>
+                    <EmptyBtn title="Добавить" class="btn btn-primary"/>
+                </form>
+            </div>
         )
     }
 }

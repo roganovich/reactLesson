@@ -46,13 +46,16 @@ class Blog extends React.Component {
 
     render() {
         return (
-            <div className="post">
-                <h2>{this.title}</h2>
+            <div className="posts w-25 p-3">
                 <BlogForm createPost={this.createPost}/>
+                <h2>{this.title}</h2>
+
+                <ul className="list-group">
                 {this.state.posts.length !== 0
-                    ? this.state.posts.map(post => <BlogItem deletePost={this.deletePost} key={post.id} post={post}/>)
-                    : <div>Empty List</div>
+                    ? this.state.posts.map(post =><BlogItem deletePost={this.deletePost} key={post.id} post={post}/>)
+                    : <li className="list-group-item">Empty List</li>
                 }
+                </ul>
             </div>
         )
     }

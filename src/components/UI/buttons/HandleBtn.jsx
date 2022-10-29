@@ -14,9 +14,7 @@ class HandleBtn extends React.Component {
 
     render() {
         return (
-            <div className={classes[this.class]}>
-                <button onClick={() =>this.handleClick(this.item)}>{this.title}</button>
-            </div>
+            <button className={this.class} onClick={() =>this.handleClick(this.item)}>{this.title}</button>
         )
     }
 }

@@ -11,13 +11,12 @@ class BlogItem extends React.Component {
 
     render() {
         return (
-            <div className="post_item" key={this.post.id}>
-                <h2 className="post_item_name">
-                    {this.post.id} {this.post.title}
-                </h2>
+            <li className="list-group-item d-flex justify-content-between"  key={this.post.id}>
+                <div className="post_item_name">{this.post.id}</div>
+                <div>{this.post.title}</div>
                 <div>{this.post.body}</div>
-                <HandleBtn item={this.post} handleClick={this.deletePost} title="Удалить" class="post_delete"/>
-            </div>
+                <HandleBtn item={this.post} handleClick={this.deletePost} title="Удалить" class="btn btn-danger"/>
+            </li>
         )
     }
 }
