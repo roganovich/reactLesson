@@ -1,5 +1,4 @@
 import React from "react";
-import classes from "./BestInput.module.css";
 
 class BestInput extends React.Component {
 
